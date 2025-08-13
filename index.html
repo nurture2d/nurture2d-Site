@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Nurture2D — Traditional 2D Animation</title>
+		<link rel="icon" href="assets/pencil2d.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#">
+					<img src="assets/pencil2d.ico" alt="Nurture2D" class="brand-logo" />
+					<span class="brand-name">Nurture2D</span>
+				</a>
+				<nav class="nav">
+					<a href="#features">Features</a>
+					<a href="#download" class="cta">Download</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-inner">
+					<div class="hero-copy">
+						<h1>Traditional 2D Animation, Reimagined</h1>
+						<p>Create hand-drawn animations with a focused, distraction-free workflow. Nurture2D is fast, friendly, and open.</p>
+						<div class="hero-ctas">
+							<a href="#download" class="btn btn-primary">Download</a>
+							<a href="#features" class="btn btn-ghost">Explore features</a>
+						</div>
+					</div>
+					<div class="hero-visual">
+						<div class="splash-frame">
+							<img src="assets/Splash.png" alt="Nurture2D splash" />
+						</div>
+						<div class="orb orb-a"></div>
+						<div class="orb orb-b"></div>
+					</div>
+				</div>
+				<div class="hero-bg-gradient"></div>
+			</section>
+
+			<section id="features" class="features">
+				<div class="container">
+					<h2>Why animators choose Nurture2D</h2>
+					<div class="feature-grid">
+						<div class="feature-card">
+							<h3>Paper-like drawing</h3>
+							<p>Designed for stylus and tablets with responsive brushes, onionskinning, basic shift and trace, and layers.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Focused interface</h3>
+							<p>A clean, distraction-free UI that keeps your canvas front-and-center.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Frame-by-frame control</h3>
+							<p>Accurate frame timing, exposure control, and flipbook playback.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Export with confidence</h3>
+							<p>Render to image sequences neatly exported in separate folders, ready for production and post-processing.</p>
+						</div>
+						<!-- Added items -->
+						<div class="feature-card">
+							<h3>Transparent gap filling</h3>
+							<p>Fill transparent pixel gaps using lasso and rectangle selection tools.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Auto Color Line fill tools</h3>
+							<p>This feature fills non-antialised preset lines automatically. Useful for cell shading to achieve that anime look.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Custom sketch brush engine</h3>
+							<p>Natural pencil textures, pressure curves, and jitter for expressive sketches.</p>
+						</div>
+						<div class="feature-card">
+							<h3>Precise cleanup tools</h3>
+							<p>Efficient erasing, smoothing, and line refinement for clean, production-ready frames.</p>
+						</div>
+						<div class="feature-card">
+							<h3>And so much more</h3>
+							<p>Built to grow with your workflow.Built with you in mind</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section id="download" class="download">
+				<div class="container">
+					<h2>Download Nurture2D</h2>
+						<p class="download-sub">Choose your platform. Windows installer coming soon. Linux AppImage available now.</p>
+					<div class="download-grid">
+						<a class="dl-card" href="#" role="button" aria-disabled="true">
+							<div class="dl-icon win"></div>
+							<div class="dl-info">
+								<span class="dl-name">Windows</span>
+								<span class="dl-meta">EXE installer</span>
+							</div>
+						</a>
+						<a class="dl-card" href="assets/downloads/Nurture2D-linux-x86_64.AppImage" download>
+							<div class="dl-icon linux"></div>
+							<div class="dl-info">
+								<span class="dl-name">Linux</span>
+								<span class="dl-meta">AppImage (x86_64)</span>
+							</div>
+						</a>
+						<a class="dl-card" href="#" role="button" aria-disabled="true">
+							<div class="dl-icon code"></div>
+							<div class="dl-info">
+								<span class="dl-name">Source code</span>
+								<span class="dl-meta">Git repository</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<div class="footer-brand">
+					<img src="assets/pencil2d.ico" alt="Nurture2D" />
+					<span>Nurture2D</span>
+				</div>
+				<div class="footer-links">
+					<a href="#features">Features</a>
+					<a href="#download">Download</a>
+					<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+				</div>
+				<div class="footer-copy">© <span id="year"></span> Nurture2D. All rights reserved.</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html> 
