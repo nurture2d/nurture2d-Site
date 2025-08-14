@@ -1,0 +1,2 @@
+# Exclude large binaries from Cloudflare Pages deploy
+assets/downloads/*
