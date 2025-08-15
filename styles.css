@@ -72,6 +72,12 @@ a { color: var(--text); text-decoration: none; }
 /* Features */
 .features { padding: 72px 0; }
 .features h2 { font-family: Montserrat, Inter, sans-serif; font-size: clamp(24px, 4vw, 36px); margin: 0 0 24px; }
+.why-choose-content { text-align: center; }
+.why-choose-message { font-size: clamp(20px, 3vw, 28px); color: var(--text); font-weight: 600; line-height: 1.4; margin: 0; }
+
+/* Features Detail */
+.features-detail { padding: 72px 0; background: linear-gradient(180deg, rgba(255,122,26,0.02), transparent); }
+.features-detail h2 { font-family: Montserrat, Inter, sans-serif; font-size: clamp(24px, 4vw, 36px); margin: 0 0 24px; }
 .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .feature-card { background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid var(--outline); padding: 18px; border-radius: 14px; box-shadow: 0 10px 30px -20px rgba(0,0,0,0.8); transition: 220ms ease; }
 .feature-card:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -24px rgba(0,0,0,0.9); }
