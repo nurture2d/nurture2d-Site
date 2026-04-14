@@ -34,6 +34,7 @@
 
   <main class="dl-main">
 
+    <!-- HERO -->
     <div class="dl-hero">
       <div class="hero-bg">
         <div class="hero-orb orb-1"></div>
@@ -43,88 +44,42 @@
       <div class="dl-hero-content">
         <div class="hero-badge reveal">Free Download</div>
         <h1 class="hero-title reveal">Get <span class="gradient-text">Nurture2D</span></h1>
-        <p class="hero-sub reveal">Choose your platform below. No account required.</p>
+        <p class="hero-sub reveal">Choose your platform and version. No account required.</p>
+      </div>
+    </div>
 
-        <!-- SEGMENT SELECTOR -->
-        <div class="segment-wrap reveal">
-          <div class="segment" id="segment">
-            <button class="seg-btn active" data-tab="app">Application</button>
-            <button class="seg-btn" data-tab="source">Source Code</button>
+    <!-- DOWNLOAD PANEL -->
+    <div class="dl-panel container reveal">
+
+      <!-- ROW 1: Type selector -->
+      <div class="dl-selectors">
+        <div class="selector-group">
+          <span class="selector-label">Type</span>
+          <div class="segment" id="seg-type">
+            <button class="seg-btn active" data-type="app">Application</button>
+            <button class="seg-btn" data-type="source">Source Code</button>
+          </div>
+        </div>
+
+        <!-- ROW 2: Version selector -->
+        <div class="selector-group">
+          <span class="selector-label">Version</span>
+          <div class="segment" id="seg-version">
+            <button class="seg-btn" data-version="2025.5">2025.5</button>
+            <button class="seg-btn active" data-version="2025.8">2025.8</button>
+            <button class="seg-btn soon" data-version="2026" disabled>2026 <span class="soon-tag">Soon</span></button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- APP DOWNLOADS -->
-    <div class="dl-tab active" id="tab-app">
-      <div class="container">
-        <div class="dl-grid reveal">
-          <a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-64bit.zip" download>
-            <div class="dl-card-icon win">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-            </div>
-            <div class="dl-card-info">
-              <span class="dl-name">Windows 64-bit</span>
-              <span class="dl-meta">ZIP archive · Recommended</span>
-            </div>
-            <div class="dl-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13M5 14l7 7 7-7"/></svg>
-            </div>
-          </a>
-          <a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-32bit.zip" download>
-            <div class="dl-card-icon win">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-            </div>
-            <div class="dl-card-info">
-              <span class="dl-name">Windows 32-bit</span>
-              <span class="dl-meta">ZIP archive</span>
-            </div>
-            <div class="dl-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13M5 14l7 7 7-7"/></svg>
-            </div>
-          </a>
-          <a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-x86_64.AppImage" download>
-            <div class="dl-card-icon linux">🐧</div>
-            <div class="dl-card-info">
-              <span class="dl-name">Linux</span>
-              <span class="dl-meta">AppImage · x86_64</span>
-            </div>
-            <div class="dl-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13M5 14l7 7 7-7"/></svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+      <!-- DIVIDER -->
+      <div class="dl-divider"></div>
 
-    <!-- SOURCE DOWNLOADS -->
-    <div class="dl-tab" id="tab-source">
-      <div class="container">
-        <div class="dl-grid reveal">
-          <a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-SourceCode.zip" download>
-            <div class="dl-card-icon code">&lt;/&gt;</div>
-            <div class="dl-card-info">
-              <span class="dl-name">Source Code</span>
-              <span class="dl-meta">ZIP archive · All platforms</span>
-            </div>
-            <div class="dl-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13M5 14l7 7 7-7"/></svg>
-            </div>
-          </a>
-          <a class="dl-card" href="https://github.com/nurture2d" target="_blank" rel="noopener">
-            <div class="dl-card-icon gh">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            </div>
-            <div class="dl-card-info">
-              <span class="dl-name">View on GitHub</span>
-              <span class="dl-meta">Browse repository</span>
-            </div>
-            <div class="dl-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </div>
-          </a>
-        </div>
+      <!-- DOWNLOAD LINKS AREA -->
+      <div class="dl-links" id="dl-links">
+        <!-- Populated by JS -->
       </div>
+
     </div>
 
   </main>
@@ -147,17 +102,101 @@
 
   <script src="script.js"></script>
   <script>
-    // Segment switcher
-    const segBtns = document.querySelectorAll(".seg-btn");
-    const tabs = document.querySelectorAll(".dl-tab");
-    segBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        segBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        const target = btn.dataset.tab;
-        tabs.forEach(t => t.classList.toggle("active", t.id === `tab-${target}`));
-      });
+    const BASE = "https://github.com/nurture2d/nurture2d-Site/releases/latest/download/";
+
+    const downloads = {
+      app: {
+        "2025.5": [
+          { name: "Windows 64-bit", meta: "ZIP archive · v6.0.4", file: "Nurture2D-64bit-v6.0.4.zip", platform: "win" },
+          { name: "Windows 32-bit", meta: "ZIP archive · v6.0.4", file: "Nurture2D-32bit-v6.0.4.zip", platform: "win" },
+          { name: "Linux",          meta: "AppImage · x86_64 · v6.0.4", file: "Nurture2D-x86_64-v6.0.4.AppImage", platform: "linux" },
+        ],
+        "2025.8": [
+          { name: "Windows 64-bit", meta: "ZIP archive · 2025.8", file: "Nurture2D-64bit.2025.8.zip", platform: "win" },
+          { name: "Windows 32-bit", meta: "ZIP archive · 2025.8", file: "Nurture2D-32bit.2025.8.zip", platform: "win" },
+          { name: "Linux",          meta: "AppImage · x86_64 · 2025.8", file: "Nurture2D-x86_64.AppImage", platform: "linux" },
+        ],
+      },
+      source: {
+        "2025.5": [
+          { name: "Source Code", meta: "ZIP archive · v6.0.4 · All platforms", file: "Nurture2D-SourceCode-v6.0.4.zip", platform: "code" },
+          { name: "View on GitHub", meta: "Browse repository", url: "https://github.com/nurture2d/nurture2d-Site", platform: "gh", external: true },
+        ],
+        "2025.8": [
+          { name: "Source Code", meta: "ZIP archive · 2025.8 · All platforms", file: "Nurture2D-SourceCode.2025.8.zip", platform: "code" },
+          { name: "View on GitHub", meta: "Browse repository", url: "https://github.com/nurture2d/nurture2d-Site", platform: "gh", external: true },
+        ],
+      },
+    };
+
+    const platformIcons = {
+      win: `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`,
+      linux: `<span style="font-size:22px">🐧</span>`,
+      code: `<span style="font-size:15px;font-weight:700;font-family:monospace">&lt;/&gt;</span>`,
+      gh: `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`,
+    };
+
+    let currentType = "app";
+    let currentVersion = "2025.8";
+
+    function renderLinks() {
+      const container = document.getElementById("dl-links");
+      const list = (downloads[currentType] || {})[currentVersion];
+
+      if (!list) {
+        container.innerHTML = `
+          <div class="dl-coming-soon">
+            <div class="soon-icon">🚀</div>
+            <h3>Coming Soon</h3>
+            <p>Version 2026 is currently in development. Check back later or watch the GitHub repository for updates.</p>
+            <a href="https://github.com/nurture2d/nurture2d-Site" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:16px">
+              Watch on GitHub
+            </a>
+          </div>`;
+        return;
+      }
+
+      container.innerHTML = list.map(item => {
+        const href = item.url || (BASE + item.file);
+        const attrs = item.external
+          ? `href="${href}" target="_blank" rel="noopener"`
+          : `href="${href}" download`;
+        const arrowIcon = item.external
+          ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`
+          : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13M5 14l7 7 7-7"/></svg>`;
+        return `
+          <a class="dl-card" ${attrs}>
+            <div class="dl-card-icon ${item.platform}">${platformIcons[item.platform]}</div>
+            <div class="dl-card-info">
+              <span class="dl-name">${item.name}</span>
+              <span class="dl-meta">${item.meta}</span>
+            </div>
+            <div class="dl-arrow">${arrowIcon}</div>
+          </a>`;
+      }).join("");
+    }
+
+    // Type segment
+    document.getElementById("seg-type").addEventListener("click", e => {
+      const btn = e.target.closest(".seg-btn");
+      if (!btn || btn.disabled) return;
+      document.querySelectorAll("#seg-type .seg-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentType = btn.dataset.type;
+      renderLinks();
     });
+
+    // Version segment
+    document.getElementById("seg-version").addEventListener("click", e => {
+      const btn = e.target.closest(".seg-btn");
+      if (!btn || btn.disabled) return;
+      document.querySelectorAll("#seg-version .seg-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentVersion = btn.dataset.version;
+      renderLinks();
+    });
+
+    renderLinks();
   </script>
 </body>
 </html>
