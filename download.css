@@ -1,0 +1,79 @@
+/* Download page specific styles */
+
+.dl-main { padding-top: 60px; }
+
+.dl-hero {
+  position: relative; overflow: hidden;
+  padding: 100px 24px 60px;
+  text-align: center;
+}
+
+/* Segment selector — macOS pill style */
+.segment-wrap { display: flex; justify-content: center; margin-top: 36px; }
+.segment {
+  display: inline-flex;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+}
+.seg-btn {
+  padding: 9px 28px;
+  border-radius: 999px;
+  border: none; background: none;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+  font-family: var(--font);
+}
+.seg-btn.active {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 0 16px var(--brand-glow);
+}
+
+/* Download tabs */
+.dl-tab { display: none; padding: 40px 0 100px; }
+.dl-tab.active { display: block; }
+
+.dl-grid {
+  display: flex; flex-direction: column; gap: 12px;
+  max-width: 640px; margin: 0 auto;
+}
+
+.dl-card {
+  display: flex; align-items: center; gap: 18px;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.dl-card:hover {
+  border-color: var(--border-2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(85,0,255,0.1);
+}
+.dl-card-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(85,0,255,0.15);
+  border: 1px solid rgba(85,0,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--brand-3); font-size: 18px; font-weight: 700;
+  flex-shrink: 0;
+}
+.dl-card-icon.win { color: #00adef; background: rgba(0,173,239,0.1); border-color: rgba(0,173,239,0.2); }
+.dl-card-icon.linux { font-size: 24px; background: rgba(255,200,0,0.08); border-color: rgba(255,200,0,0.15); }
+.dl-card-icon.gh { color: var(--text-2); background: var(--surface-2); border-color: var(--border); }
+.dl-card-info { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.dl-name { font-size: 16px; font-weight: 600; color: var(--text); }
+.dl-meta { font-size: 13px; color: var(--text-3); }
+.dl-arrow { color: var(--text-3); flex-shrink: 0; transition: color 0.2s, transform 0.2s; }
+.dl-card:hover .dl-arrow { color: var(--brand-3); transform: translateY(2px); }
+
+@media (max-width: 640px) {
+  .seg-btn { padding: 8px 18px; font-size: 13px; }
+}

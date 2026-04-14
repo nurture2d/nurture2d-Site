@@ -1,258 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Nurture2D — Traditional 2D Animation</title>
-		<link rel="icon" href="assets/pencil2d.ico" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container header-inner">
-				<a class="brand" href="#">
-					<img src="assets/pencil2d.ico" alt="Nurture2D" class="brand-logo" />
-					<span class="brand-name">Nurture2D</span>
-				</a>
-				<nav class="nav">
-					<a href="#features">Features</a>
-					<a href="#notice">Notice</a>
-					<a href="#contact">Contact</a>
-					<a href="#download" class="cta">Download</a>
-				</nav>
-			</div>
-		</header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nurture2D — Traditional 2D Animation</title>
+  <link rel="icon" href="assets/pencil2d.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-		<main>
-			<section class="hero">
-				<div class="container hero-inner">
-					<div class="hero-copy">
-						<h1>Traditional 2D Animation, Reimagined</h1>
-						<p>Create hand-drawn animations with a focused, distraction-free workflow. Nurture2D is fast, friendly, and open.</p>
-						<div class="hero-ctas">
-							<a href="#download" class="btn btn-primary">Download</a>
-							<a href="#features" class="btn btn-ghost">Explore features</a>
-						</div>
-					</div>
-					<div class="hero-visual">
-						<div class="splash-frame">
-							<div class="splash-mist">
-								<span class="mist-layer mist-a"></span>
-								<span class="mist-layer mist-b"></span>
-								<span class="mist-layer mist-c"></span>
-							</div>
-							<img src="assets/NameLogo.svg" alt="Nurture2D" class="splash-logo" />
-						</div>
-						<div class="orb orb-a"></div>
-						<div class="orb orb-b"></div>
-					</div>
-				</div>
-				<div class="hero-bg-gradient"></div>
-			</section>
+  <!-- NAV -->
+  <header class="nav-bar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#">
+        <img src="assets/Icon.png" alt="Nurture2D icon" class="nav-icon" />
+        <img src="assets/LogoName.png" alt="Nurture2D" class="nav-wordmark" />
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#notice">Notice</a>
+        <a href="#contact">Contact</a>
+        <a href="download.html" class="nav-cta">Download</a>
+      </nav>
+      <button class="nav-hamburger" aria-label="Menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-			<section id="features" class="features">
-				<div class="container">
-					<h2>Why animators choose Nurture2D</h2>
-					<div class="why-choose-content">
-						<p class="why-choose-message">Power with no price attached. Feature-rich and made for your workflow. Made for you.</p>
-					</div>
-				</div>
-			</section>
+  <main>
 
-			<section id="features-detail" class="features-detail">
-				<div class="container">
-					<h2>Features</h2>
-					
-					<div class="feature-category">
-						<h3>Drawing & Pen Tools</h3>
-						<div class="feature-grid">
-							<div class="feature-card">
-								<h4>Paper-like drawing</h4>
-								<p>Designed for stylus and tablets with responsive brushes, onionskinning, basic shift and trace, and layers.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Pen Tool presets</h4>
-								<p>Five color presets optimized for no-antialiasing, ensuring seamless integration with auto color fill features.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Advanced curve tools</h4>
-								<p>Professional curve and spline drawing tools similar to Clip Studio Paint for precise line creation.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Custom sketch brush engine</h4>
-								<p>Natural pencil textures, pressure curves, and jitter for expressive sketches with authentic feel.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Draw behind feature</h4>
-								<p>Advanced drawing tools that allow you to draw behind existing elements for complex layering.</p>
-							</div>
-						</div>
-					</div>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge reveal">Open Source · Free Forever</div>
+        <h1 class="hero-title reveal">
+          Animation the way<br />
+          <span class="gradient-text">it was meant to be.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Nurture2D is a focused, distraction-free 2D animation tool built for hand-drawn artists.
+          Powerful tools. Zero cost.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="download.html" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M5 14l7 7 7-7"/><path d="M3 21h18"/></svg>
+            Download Free
+          </a>
+          <a href="#features" class="btn btn-ghost">Explore Features</a>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="app-window">
+            <div class="window-chrome">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="window-title">Nurture2D</span>
+            </div>
+            <div class="window-body">
+              <div class="window-sidebar">
+                <div class="tool-icon active"></div>
+                <div class="tool-icon"></div>
+                <div class="tool-icon"></div>
+                <div class="tool-icon"></div>
+                <div class="tool-icon"></div>
+                <div class="tool-icon"></div>
+              </div>
+              <div class="window-canvas">
+                <div class="canvas-lines">
+                  <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60 200 Q120 80 200 120 Q280 160 340 60" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M80 220 Q150 100 230 140 Q300 170 360 80" stroke="#7b33ff" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M40 180 Q100 60 180 100 Q260 140 320 40" stroke="#9966ff" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+                    <circle cx="200" cy="120" r="5" fill="#5500ff"/>
+                    <circle cx="120" cy="80" r="3" fill="#7b33ff" opacity="0.7"/>
+                    <circle cx="300" cy="160" r="3" fill="#7b33ff" opacity="0.7"/>
+                  </svg>
+                </div>
+                <div class="canvas-onion">
+                  <div class="onion-frame f1"></div>
+                  <div class="onion-frame f2"></div>
+                </div>
+              </div>
+              <div class="window-timeline">
+                <div class="tl-track">
+                  <div class="tl-key k1"></div>
+                  <div class="tl-key k2"></div>
+                  <div class="tl-key k3"></div>
+                  <div class="tl-key k4"></div>
+                  <div class="tl-key k5"></div>
+                </div>
+                <div class="tl-playhead"></div>
+              </div>
+            </div>
+          </div>
+          <div class="window-glow"></div>
+        </div>
+      </div>
+    </section>
 
-					<div class="feature-category">
-						<h3>Fill & Color Tools</h3>
-						<div class="feature-grid">
-							<div class="feature-card">
-								<h4>Auto Color Line fill tools</h4>
-								<p>Intelligent fill system that automatically fills non-antialiased preset lines, perfect for cell shading and anime-style artwork.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Transparent gap filling</h4>
-								<p>Fill transparent pixel gaps using lasso and rectangle selection tools for clean, professional results.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Fill tools ignore target color</h4>
-								<p>Prevent accidental fills of lineart with intelligent color detection and protection.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Dplate tool</h4>
-								<p>Quickly create color design boxes found in character color sheets for professional character design workflows.</p>
-							</div>
-						</div>
-					</div>
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+      <div class="stats-inner">
+        <div class="stat reveal">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Free & Open Source</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Specialized Tools</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal">
+          <span class="stat-num">Win + Linux</span>
+          <span class="stat-label">Platform Support</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal">
+          <span class="stat-num">Frame-by-Frame</span>
+          <span class="stat-label">Animation Control</span>
+        </div>
+      </div>
+    </section>
 
-					<div class="feature-category">
-						<h3>Interface & Workflow</h3>
-						<div class="feature-grid">
-							<div class="feature-card">
-								<h4>Focused interface</h4>
-								<p>A clean, distraction-free UI that keeps your canvas front-and-center for maximum creative focus.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Refined tool box UI</h4>
-								<p>Streamlined and intuitive tool organization for efficient access to all drawing and editing functions.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Reference Window</h4>
-								<p>Dedicated reference panel for design sheets, color palettes, and sending current drawings as reference material.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Switchable color wheels</h4>
-								<p>Toggle between square and triangle color wheels to match your preferred color selection workflow.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Popup color wheel</h4>
-								<p>Contextual color picker that appears at your cursor position for decluttered, efficient color selection.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Hide all shortcut (Tab)</h4>
-								<p>Instantly hide all windows with a single keypress for truly immersive, distraction-free drawing experience.</p>
-							</div>
-						</div>
-					</div>
+    <!-- FEATURES INTRO -->
+    <section class="features-intro" id="features">
+      <div class="container">
+        <div class="section-label reveal">Features</div>
+        <h2 class="section-title reveal">Everything an animator needs.<br /><span class="gradient-text">Nothing they don't.</span></h2>
+        <p class="section-sub reveal">Built from the ground up for traditional 2D workflows — from rough sketches to clean lineart to final color.</p>
+      </div>
+    </section>
 
-					<div class="feature-category">
-						<h3>Animation & Production</h3>
-						<div class="feature-grid">
-							<div class="feature-card">
-								<h4>Frame-by-frame control</h4>
-								<p>Accurate frame timing, exposure control, and flipbook playback for professional animation workflows.</p>
-							</div>
-							<div class="feature-card">
-								<h4>Export with confidence</h4>
-								<p>Render to image sequences neatly exported in separate folders, ready for production and post-processing.</p>
-							</div>
-						</div>
-					</div>
+    <!-- FEATURE CARDS -->
+    <section class="feature-cards" id="showcase">
+      <div class="container">
+        <div class="cards-grid">
 
-					<div class="feature-category">
-						<h3>Known Bugs & Workarounds</h3>
-						<div class="feature-grid">
-							<div class="feature-card">
-								<h4>Toolbar settings workaround</h4>
-								<p>Right-click the top area of any widget to access the Windows menu. Disable "Tools located above the View toolbar" setting (this refers to the left toolbar) as it doesn't save tool settings. Use the normal Tools dock from the Windows menu instead. Note: The left toolbar can only be found in the right-clicked menu.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+          <div class="feat-card card-large reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </div>
+            <h3>Paper-like Drawing</h3>
+            <p>Responsive brushes, onion skinning, layers, and pressure curves that feel like real pencil on paper.</p>
+            <div class="feat-card-visual drawing-visual">
+              <svg viewBox="0 0 200 120" fill="none">
+                <path d="M20 90 Q60 30 100 60 Q140 90 180 20" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M20 95 Q60 35 100 65 Q140 95 180 25" stroke="#7b33ff" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <path d="M20 85 Q60 25 100 55 Q140 85 180 15" stroke="#9966ff" stroke-width="1" stroke-linecap="round" opacity="0.25"/>
+              </svg>
+            </div>
+          </div>
 
-			<section id="notice" class="notice">
-				<div class="container">
-					<div class="notice-content">
-						<h2>Important Notice</h2>
-						<p>Nurture2D is a personal fork created by a single developer. While I've worked diligently to deliver a feature-rich animation application, please be aware that bugs and issues may occur. I am not a professional software developer, but with the assistance of AI tools, I've been able to create a comprehensive animation suite that I hope will be valuable to the community.</p>
-						<p>Your feedback and patience are greatly appreciated.</p>
-					</div>
-				</div>
-			</section>
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Frame-by-Frame Control</h3>
+            <p>Accurate frame timing, exposure control, and flipbook playback.</p>
+          </div>
 
-			<section id="download" class="download">
-				<div class="container">
-					<h2>Download Nurture2D</h2>
-						<p class="download-sub">Choose your platform. Windows installers and Linux AppImage available for download.</p>
-					<div class="download-grid">
-						<a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-64bit.zip" download>
-							<div class="dl-icon win"></div>
-							<div class="dl-info">
-								<span class="dl-name">Windows 64-bit</span>
-								<span class="dl-meta">ZIP archive</span>
-							</div>
-						</a>
-						<a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-32bit.zip" download>
-							<div class="dl-icon win"></div>
-							<div class="dl-info">
-								<span class="dl-name">Windows 32-bit</span>
-								<span class="dl-meta">ZIP archive</span>
-							</div>
-						</a>
-						<a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-x86_64.AppImage" download>
-							<div class="dl-icon linux"></div>
-							<div class="dl-info">
-								<span class="dl-name">Linux</span>
-								<span class="dl-meta">AppImage (x86_64)</span>
-							</div>
-						</a>
-						<a class="dl-card" href="https://github.com/nurture2d/nurture2d-Site/releases/latest/download/Nurture2D-SourceCode.zip" download>
-							<div class="dl-icon code"></div>
-							<div class="dl-info">
-								<span class="dl-name">Source code</span>
-								<span class="dl-meta">ZIP archive</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Auto Color Fill</h3>
+            <p>Intelligent fill that works with non-antialiased lines — perfect for cell shading and anime-style art.</p>
+          </div>
 
-			<section id="contact" class="contact">
-				<div class="container">
-					<h2>Contact Information</h2>
-					<div class="contact-content">
-						<p>If you encounter any startup issues or have questions about Nurture2D, please don't hesitate to reach out:</p>
-						<div class="contact-info">
-							<div class="contact-item">
-								<strong>Primary Email:</strong> <a href="mailto:nurture2d@gmail.com">nurture2d@gmail.com</a>
-							</div>
-							<div class="contact-item">
-								<strong>Alternative Email:</strong> <a href="mailto:lemied23@gmail.com">lemied23@gmail.com</a>
-							</div>
-						</div>
-						<p class="contact-note">I'm committed to helping users resolve any technical difficulties they may encounter with the application.</p>
-					</div>
-				</div>
-			</section>
-		</main>
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Switchable Color Wheels</h3>
+            <p>Toggle between square and triangle wheels. Popup color picker at your cursor for clean workflow.</p>
+          </div>
 
-		<footer class="site-footer">
-			<div class="container footer-inner">
-				<div class="footer-brand">
-					<img src="assets/pencil2d.ico" alt="Nurture2D" />
-					<span>Nurture2D</span>
-				</div>
-				<div class="footer-links">
-					<a href="#features">Features</a>
-					<a href="#notice">Notice</a>
-					<a href="#contact">Contact</a>
-					<a href="#download">Download</a>
-					<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-				</div>
-				<div class="footer-copy">© <span id="year"></span> Nurture2D. All rights reserved.</div>
-			</div>
-		</footer>
+          <div class="feat-card card-large reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Focused Interface</h3>
+            <p>A clean, distraction-free UI that keeps your canvas front-and-center. Hide everything with a single Tab keypress.</p>
+            <div class="feat-card-visual ui-visual">
+              <div class="mini-ui">
+                <div class="mini-toolbar">
+                  <div class="mini-tool active"></div>
+                  <div class="mini-tool"></div>
+                  <div class="mini-tool"></div>
+                </div>
+                <div class="mini-canvas"></div>
+              </div>
+            </div>
+          </div>
 
-		<script src="script.js"></script>
-	</body>
-</html> 
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <h3>Export with Confidence</h3>
+            <p>Render to image sequences in separate folders, ready for production and post-processing.</p>
+          </div>
+
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+            </div>
+            <h3>Advanced Curve Tools</h3>
+            <p>Professional spline drawing tools similar to Clip Studio Paint for precise, expressive line creation.</p>
+          </div>
+
+          <div class="feat-card reveal">
+            <div class="feat-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Reference Window</h3>
+            <p>Dedicated reference panel for design sheets, color palettes, and sending current drawings as reference.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DEEP DIVE SECTION -->
+    <section class="deep-dive">
+      <div class="container">
+
+        <div class="dive-row reveal">
+          <div class="dive-text">
+            <div class="section-label">Drawing Tools</div>
+            <h3>Built for the way animators actually draw.</h3>
+            <p>Five pen presets optimized for no-antialiasing, a custom sketch brush engine with natural pencil textures, and a draw-behind feature for complex layering. Every tool is designed around the traditional animation workflow.</p>
+            <ul class="dive-list">
+              <li>Pen Tool presets with color optimization</li>
+              <li>Custom sketch brush with pressure curves</li>
+              <li>Draw behind existing elements</li>
+              <li>Onion skinning with shift & trace</li>
+            </ul>
+          </div>
+          <div class="dive-visual">
+            <div class="glass-card">
+              <div class="brush-demo">
+                <svg viewBox="0 0 300 200" fill="none">
+                  <path d="M30 160 C80 60 150 100 220 40 C260 10 280 80 290 120" stroke="#5500ff" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M30 165 C80 65 150 105 220 45 C260 15 280 85 290 125" stroke="#7b33ff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                  <path d="M30 155 C80 55 150 95 220 35 C260 5 280 75 290 115" stroke="#9966ff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                  <circle cx="220" cy="40" r="6" fill="#5500ff" opacity="0.8"/>
+                  <circle cx="80" cy="100" r="4" fill="#7b33ff" opacity="0.6"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dive-row dive-row-reverse reveal">
+          <div class="dive-text">
+            <div class="section-label">Color & Fill</div>
+            <h3>Color that works with your lines, not against them.</h3>
+            <p>The auto color line fill system intelligently fills non-antialiased preset lines. Fill transparent pixel gaps with lasso and rectangle selection. Prevent accidental fills of lineart with intelligent color detection.</p>
+            <ul class="dive-list">
+              <li>Auto Color Line fill for cell shading</li>
+              <li>Transparent gap filling tools</li>
+              <li>Fill tools ignore target color</li>
+              <li>Dplate tool for character color sheets</li>
+            </ul>
+          </div>
+          <div class="dive-visual">
+            <div class="glass-card">
+              <div class="color-demo">
+                <div class="color-swatch" style="background: #5500ff;"></div>
+                <div class="color-swatch" style="background: #7b33ff;"></div>
+                <div class="color-swatch" style="background: #9966ff;"></div>
+                <div class="color-swatch" style="background: #c299ff;"></div>
+                <div class="color-swatch" style="background: #1a0040;"></div>
+                <div class="color-swatch" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.1);"></div>
+                <div class="color-wheel-mini">
+                  <svg viewBox="0 0 100 100">
+                    <defs>
+                      <radialGradient id="cw">
+                        <stop offset="0%" stop-color="#ffffff"/>
+                        <stop offset="100%" stop-color="#5500ff"/>
+                      </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="url(#cw)" opacity="0.9"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="white" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NOTICE -->
+    <section class="notice-section" id="notice">
+      <div class="container">
+        <div class="notice-card reveal">
+          <div class="notice-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="notice-body">
+            <h4>A note from the developer</h4>
+            <p>Nurture2D is a personal fork created by a single developer. While I've worked diligently to deliver a feature-rich animation application, bugs and issues may occur. I'm not a professional software developer, but with the help of AI tools I've built something I hope is genuinely useful to the community. Your feedback and patience are greatly appreciated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-orb"></div>
+          <img src="assets/Icon.png" alt="" class="cta-icon" />
+          <h2>Ready to animate?</h2>
+          <p>Download Nurture2D free for Windows and Linux.</p>
+          <a href="download.html" class="btn btn-primary btn-large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v13M5 14l7 7 7-7"/><path d="M3 21h18"/></svg>
+            Download Now — It's Free
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-label reveal">Contact</div>
+        <h2 class="section-title reveal">Get in touch</h2>
+        <div class="contact-cards reveal">
+          <a href="mailto:nurture2d@gmail.com" class="contact-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            nurture2d@gmail.com
+          </a>
+          <a href="mailto:lemied23@gmail.com" class="contact-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            lemied23@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/Icon.png" alt="Nurture2D" class="footer-icon" />
+        <img src="assets/LogoName.png" alt="Nurture2D" class="footer-wordmark" />
+      </div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#notice">Notice</a>
+        <a href="#contact">Contact</a>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/nurture2d" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-copy">© <span id="year"></span> Nurture2D. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
