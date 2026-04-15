@@ -145,166 +145,109 @@
       </div>
     </section>
 
-    <!-- FEATURE CARDS -->
-    <section class="feature-cards" id="showcase">
-      <div class="container">
-        <div class="cards-grid">
+    <!-- FEATURE SHOWCASE — alternating 50/50 split -->
+    <section class="showcase" id="showcase">
 
-          <div class="feat-card card-large reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l-7-7 7-7"/><path d="M19 12H5"/></svg>
-            </div>
-            <h3>Paper-like Drawing</h3>
-            <p>Responsive brushes, onion skinning, layers, and pressure curves that feel like real pencil on paper.</p>
-            <div class="feat-card-visual drawing-visual">
-              <svg viewBox="0 0 200 120" fill="none">
-                <path d="M20 90 Q60 30 100 60 Q140 90 180 20" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M20 95 Q60 35 100 65 Q140 95 180 25" stroke="#7b33ff" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <path d="M20 85 Q60 25 100 55 Q140 85 180 15" stroke="#9966ff" stroke-width="1" stroke-linecap="round" opacity="0.25"/>
-              </svg>
-            </div>
+      <!-- 1: dark left / white right -->
+      <div class="showcase-row">
+        <div class="showcase-dark">
+          <div class="section-label">Drawing Tools</div>
+          <h3>Paper-like drawing, built for animators.</h3>
+          <p>Responsive brushes, onion skinning, layers, and pressure curves that feel like real pencil on paper. Five pen presets optimised for no-antialiasing, a custom sketch brush engine with natural pencil textures, and a draw-behind feature for complex layering.</p>
+          <ul class="showcase-list">
+            <li>Pen Tool presets with color optimisation</li>
+            <li>Custom sketch brush with pressure curves</li>
+            <li>Draw behind existing elements</li>
+            <li>Onion skinning with shift &amp; trace</li>
+          </ul>
+        </div>
+        <div class="showcase-light">
+          <div class="showcase-media">
+            <img src="assets/Splash.png" alt="Drawing tools" />
           </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <h3>Frame-by-Frame Control</h3>
-            <p>Accurate frame timing, exposure control, and flipbook playback.</p>
-          </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3>Auto Color Fill</h3>
-            <p>Intelligent fill that works with non-antialiased lines — perfect for cell shading and anime-style art.</p>
-          </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            </div>
-            <h3>Switchable Color Wheels</h3>
-            <p>Toggle between square and triangle wheels. Popup color picker at your cursor for clean workflow.</p>
-          </div>
-
-          <div class="feat-card card-large reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <h3>Focused Interface</h3>
-            <p>A clean, distraction-free UI that keeps your canvas front-and-center. Hide everything with a single Tab keypress.</p>
-            <div class="feat-card-visual ui-visual">
-              <div class="mini-ui">
-                <div class="mini-toolbar">
-                  <div class="mini-tool active"></div>
-                  <div class="mini-tool"></div>
-                  <div class="mini-tool"></div>
-                </div>
-                <div class="mini-canvas"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </div>
-            <h3>Export with Confidence</h3>
-            <p>Render to image sequences in separate folders, ready for production and post-processing.</p>
-          </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-            </div>
-            <h3>Advanced Curve Tools</h3>
-            <p>Professional spline drawing tools similar to Clip Studio Paint for precise, expressive line creation.</p>
-          </div>
-
-          <div class="feat-card reveal">
-            <div class="feat-card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h3>Reference Window</h3>
-            <p>Dedicated reference panel for design sheets, color palettes, and sending current drawings as reference.</p>
-          </div>
-
         </div>
       </div>
-    </section>
 
-    <!-- DEEP DIVE SECTION -->
-    <section class="deep-dive">
-      <div class="container">
-
-        <div class="dive-row reveal">
-          <div class="dive-text">
-            <div class="section-label">Drawing Tools</div>
-            <h3>Built for the way animators actually draw.</h3>
-            <p>Five pen presets optimized for no-antialiasing, a custom sketch brush engine with natural pencil textures, and a draw-behind feature for complex layering. Every tool is designed around the traditional animation workflow.</p>
-            <ul class="dive-list">
-              <li>Pen Tool presets with color optimization</li>
-              <li>Custom sketch brush with pressure curves</li>
-              <li>Draw behind existing elements</li>
-              <li>Onion skinning with shift & trace</li>
-            </ul>
-          </div>
-          <div class="dive-visual">
-            <div class="glass-card">
-              <div class="brush-demo">
-                <svg viewBox="0 0 300 200" fill="none">
-                  <path d="M30 160 C80 60 150 100 220 40 C260 10 280 80 290 120" stroke="#5500ff" stroke-width="3" stroke-linecap="round"/>
-                  <path d="M30 165 C80 65 150 105 220 45 C260 15 280 85 290 125" stroke="#7b33ff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-                  <path d="M30 155 C80 55 150 95 220 35 C260 5 280 75 290 115" stroke="#9966ff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-                  <circle cx="220" cy="40" r="6" fill="#5500ff" opacity="0.8"/>
-                  <circle cx="80" cy="100" r="4" fill="#7b33ff" opacity="0.6"/>
-                </svg>
-              </div>
-            </div>
+      <!-- 2: white left / dark right -->
+      <div class="showcase-row showcase-row-flip">
+        <div class="showcase-light">
+          <div class="showcase-media">
+            <img src="assets/Fill.png" alt="Auto color fill" />
           </div>
         </div>
-
-        <div class="dive-row dive-row-reverse reveal">
-          <div class="dive-text">
-            <div class="section-label">Color & Fill</div>
-            <h3>Color that works with your lines, not against them.</h3>
-            <p>The auto color line fill system intelligently fills non-antialiased preset lines. Fill transparent pixel gaps with lasso and rectangle selection. Prevent accidental fills of lineart with intelligent color detection.</p>
-            <ul class="dive-list">
-              <li>Auto Color Line fill for cell shading</li>
-              <li>Transparent gap filling tools</li>
-              <li>Fill tools ignore target color</li>
-              <li>Dplate tool for character color sheets</li>
-            </ul>
-          </div>
-          <div class="dive-visual">
-            <div class="glass-card">
-              <div class="color-demo">
-                <div class="color-swatch" style="background: #5500ff;"></div>
-                <div class="color-swatch" style="background: #7b33ff;"></div>
-                <div class="color-swatch" style="background: #9966ff;"></div>
-                <div class="color-swatch" style="background: #c299ff;"></div>
-                <div class="color-swatch" style="background: #1a0040;"></div>
-                <div class="color-swatch" style="background: #ffffff; border: 1px solid rgba(255,255,255,0.1);"></div>
-                <div class="color-wheel-mini">
-                  <svg viewBox="0 0 100 100">
-                    <defs>
-                      <radialGradient id="cw">
-                        <stop offset="0%" stop-color="#ffffff"/>
-                        <stop offset="100%" stop-color="#5500ff"/>
-                      </radialGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="45" fill="url(#cw)" opacity="0.9"/>
-                    <circle cx="50" cy="50" r="8" fill="none" stroke="white" stroke-width="2"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="showcase-dark">
+          <div class="section-label">Color &amp; Fill</div>
+          <h3>Color that works with your lines, not against them.</h3>
+          <p>The auto color line fill system intelligently fills non-antialiased preset lines. Fill transparent pixel gaps with lasso and rectangle selection. Prevent accidental fills of lineart with intelligent color detection.</p>
+          <ul class="showcase-list">
+            <li>Auto Color Line fill for cell shading</li>
+            <li>Transparent gap filling tools</li>
+            <li>Fill tools ignore target color</li>
+            <li>Dplate tool for character color sheets</li>
+          </ul>
         </div>
-
       </div>
+
+      <!-- 3: dark left / white right -->
+      <div class="showcase-row">
+        <div class="showcase-dark">
+          <div class="section-label">Color Wheels</div>
+          <h3>Pick color the way your brain works.</h3>
+          <p>Toggle between square and triangle color wheels to match your preferred workflow. A popup color picker appears right at your cursor position — no reaching across the screen, no interrupting your flow.</p>
+          <ul class="showcase-list">
+            <li>Switchable square &amp; triangle wheels</li>
+            <li>Popup color picker at cursor</li>
+            <li>Decluttered, efficient color selection</li>
+          </ul>
+        </div>
+        <div class="showcase-light">
+          <div class="showcase-media">
+            <img src="assets/ColorWheel.png" alt="Color wheel" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 4: white left / dark right -->
+      <div class="showcase-row showcase-row-flip">
+        <div class="showcase-light">
+          <div class="showcase-media showcase-media-svg">
+            <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="280" rx="16" fill="#f4f0ff"/>
+              <!-- timeline bar -->
+              <rect x="20" y="220" width="360" height="40" rx="8" fill="#ede8ff"/>
+              <rect x="20" y="220" width="360" height="40" rx="8" stroke="#c4b0ff" stroke-width="1"/>
+              <!-- keyframes -->
+              <rect x="60"  y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 66 240)"/>
+              <rect x="120" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 126 240)"/>
+              <rect x="180" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 186 240)"/>
+              <rect x="240" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 246 240)"/>
+              <rect x="300" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 306 240)"/>
+              <!-- playhead -->
+              <rect x="148" y="216" width="2" height="52" rx="1" fill="#5500ff"/>
+              <!-- canvas area -->
+              <rect x="20" y="20" width="360" height="188" rx="10" fill="#fff" stroke="#e0d8ff" stroke-width="1"/>
+              <!-- onion frames -->
+              <path d="M100 160 Q160 60 220 100 Q280 140 340 60" stroke="#c4b0ff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+              <path d="M100 155 Q160 55 220 95 Q280 135 340 55" stroke="#9966ff" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/>
+              <!-- current frame -->
+              <path d="M100 165 Q160 65 220 105 Q280 145 340 65" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="220" cy="105" r="5" fill="#5500ff"/>
+            </svg>
+          </div>
+        </div>
+        <div class="showcase-dark">
+          <div class="section-label">Animation</div>
+          <h3>Frame-by-frame control, exactly as intended.</h3>
+          <p>Accurate frame timing, exposure control, and flipbook playback give you full command over every drawing. Export to image sequences in separate folders, ready for production and post-processing pipelines.</p>
+          <ul class="showcase-list">
+            <li>Accurate frame timing &amp; exposure control</li>
+            <li>Flipbook playback</li>
+            <li>Export to numbered image sequences</li>
+            <li>Organised output folders per export</li>
+          </ul>
+        </div>
+      </div>
+
     </section>
 
     <!-- NOTICE -->
