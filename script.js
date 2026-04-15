@@ -43,7 +43,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach(el => observer.observe(el));
 
-  // Smooth active nav link highlight
+  // Showcase media renderer
+  // Supports data-media="image|gif|video|svg"
+  // gif and image both render as <img> — gifs autoplay natively
+  document.querySelectorAll(".showcase-media[data-media]").forEach(el => {
+    const type = el.dataset.media;
+    const src  = el.dataset.src;
+    const alt  = el.dataset.alt || "";
+    if (!src) return; // svg type has inline content, skip
+    if (type === "image" || type === "gif") {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = alt;
+      el.appendChild(img);
+    } else if (type === "video") {
+      const vid = document.createElement("video");
+      vid.src = src;
+      vid.autoplay = true;
+      vid.loop = true;
+      vid.muted = true;
+      vid.playsInline = true;
+      el.appendChild(vid);
+    }
+  });
   const sections = document.querySelectorAll("section[id]");
   const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
   const sectionObserver = new IntersectionObserver((entries) => {

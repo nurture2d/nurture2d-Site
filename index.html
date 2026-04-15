@@ -146,108 +146,101 @@
     </section>
 
     <!-- FEATURE SHOWCASE — alternating 50/50 split -->
+    <!-- Media types: data-media="image|gif|video" data-src="path" -->
     <section class="showcase" id="showcase">
+      <div class="showcase-bg-wrap">
 
-      <!-- 1: dark left / white right -->
-      <div class="showcase-row">
-        <div class="showcase-dark">
-          <div class="section-label">Drawing Tools</div>
-          <h3>Paper-like drawing, built for animators.</h3>
-          <p>Responsive brushes, onion skinning, layers, and pressure curves that feel like real pencil on paper. Five pen presets optimised for no-antialiasing, a custom sketch brush engine with natural pencil textures, and a draw-behind feature for complex layering.</p>
-          <ul class="showcase-list">
-            <li>Pen Tool presets with color optimisation</li>
-            <li>Custom sketch brush with pressure curves</li>
-            <li>Draw behind existing elements</li>
-            <li>Onion skinning with shift &amp; trace</li>
-          </ul>
-        </div>
-        <div class="showcase-light">
-          <div class="showcase-media">
-            <img src="assets/Splash.png" alt="Drawing tools" />
+        <!-- 1: dark left / white right -->
+        <div class="showcase-row">
+          <div class="showcase-dark">
+            <div class="section-label">Drawing Tools</div>
+            <h3>Paper-like drawing, built for animators.</h3>
+            <p>Responsive brushes, onion skinning, layers, and pressure curves that feel like real pencil on paper. Five pen presets optimised for no-antialiasing, a custom sketch brush engine with natural pencil textures, and a draw-behind feature for complex layering.</p>
+            <ul class="showcase-list">
+              <li>Pen Tool presets with color optimisation</li>
+              <li>Custom sketch brush with pressure curves</li>
+              <li>Draw behind existing elements</li>
+              <li>Onion skinning with shift &amp; trace</li>
+            </ul>
+          </div>
+          <div class="showcase-light">
+            <div class="showcase-media" data-media="image" data-src="assets/Splash.png" data-alt="Drawing tools"></div>
           </div>
         </div>
-      </div>
 
-      <!-- 2: white left / dark right -->
-      <div class="showcase-row showcase-row-flip">
-        <div class="showcase-light">
-          <div class="showcase-media">
-            <img src="assets/Fill.png" alt="Auto color fill" />
+        <!-- 2: white left / dark right -->
+        <div class="showcase-row showcase-row-flip">
+          <div class="showcase-light">
+            <div class="showcase-media" data-media="image" data-src="assets/Fill.png" data-alt="Auto color fill"></div>
+          </div>
+          <div class="showcase-dark">
+            <div class="section-label">Color &amp; Fill</div>
+            <h3>Color that works with your lines, not against them.</h3>
+            <p>The auto color line fill system intelligently fills non-antialiased preset lines. Fill transparent pixel gaps with lasso and rectangle selection. Prevent accidental fills of lineart with intelligent color detection.</p>
+            <ul class="showcase-list">
+              <li>Auto Color Line fill for cell shading</li>
+              <li>Transparent gap filling tools</li>
+              <li>Fill tools ignore target color</li>
+              <li>Dplate tool for character color sheets</li>
+            </ul>
           </div>
         </div>
-        <div class="showcase-dark">
-          <div class="section-label">Color &amp; Fill</div>
-          <h3>Color that works with your lines, not against them.</h3>
-          <p>The auto color line fill system intelligently fills non-antialiased preset lines. Fill transparent pixel gaps with lasso and rectangle selection. Prevent accidental fills of lineart with intelligent color detection.</p>
-          <ul class="showcase-list">
-            <li>Auto Color Line fill for cell shading</li>
-            <li>Transparent gap filling tools</li>
-            <li>Fill tools ignore target color</li>
-            <li>Dplate tool for character color sheets</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- 3: dark left / white right -->
-      <div class="showcase-row">
-        <div class="showcase-dark">
-          <div class="section-label">Color Wheels</div>
-          <h3>Pick color the way your brain works.</h3>
-          <p>Toggle between square and triangle color wheels to match your preferred workflow. A popup color picker appears right at your cursor position — no reaching across the screen, no interrupting your flow.</p>
-          <ul class="showcase-list">
-            <li>Switchable square &amp; triangle wheels</li>
-            <li>Popup color picker at cursor</li>
-            <li>Decluttered, efficient color selection</li>
-          </ul>
-        </div>
-        <div class="showcase-light">
-          <div class="showcase-media">
-            <img src="assets/ColorWheel.png" alt="Color wheel" />
+        <!-- 3: dark left / white right -->
+        <div class="showcase-row">
+          <div class="showcase-dark">
+            <div class="section-label">Color Wheels</div>
+            <h3>Pick color the way your brain works.</h3>
+            <p>Toggle between square and triangle color wheels to match your preferred workflow. A popup color picker appears right at your cursor position — no reaching across the screen, no interrupting your flow.</p>
+            <ul class="showcase-list">
+              <li>Switchable square &amp; triangle wheels</li>
+              <li>Popup color picker at cursor</li>
+              <li>Decluttered, efficient color selection</li>
+            </ul>
+          </div>
+          <div class="showcase-light">
+            <div class="showcase-media" data-media="image" data-src="assets/ColorWheel.png" data-alt="Color wheel"></div>
           </div>
         </div>
-      </div>
 
-      <!-- 4: white left / dark right -->
-      <div class="showcase-row showcase-row-flip">
-        <div class="showcase-light">
-          <div class="showcase-media showcase-media-svg">
-            <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="280" rx="16" fill="#f4f0ff"/>
-              <!-- timeline bar -->
-              <rect x="20" y="220" width="360" height="40" rx="8" fill="#ede8ff"/>
-              <rect x="20" y="220" width="360" height="40" rx="8" stroke="#c4b0ff" stroke-width="1"/>
-              <!-- keyframes -->
-              <rect x="60"  y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 66 240)"/>
-              <rect x="120" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 126 240)"/>
-              <rect x="180" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 186 240)"/>
-              <rect x="240" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 246 240)"/>
-              <rect x="300" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 306 240)"/>
-              <!-- playhead -->
-              <rect x="148" y="216" width="2" height="52" rx="1" fill="#5500ff"/>
-              <!-- canvas area -->
-              <rect x="20" y="20" width="360" height="188" rx="10" fill="#fff" stroke="#e0d8ff" stroke-width="1"/>
-              <!-- onion frames -->
-              <path d="M100 160 Q160 60 220 100 Q280 140 340 60" stroke="#c4b0ff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-              <path d="M100 155 Q160 55 220 95 Q280 135 340 55" stroke="#9966ff" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/>
-              <!-- current frame -->
-              <path d="M100 165 Q160 65 220 105 Q280 145 340 65" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="220" cy="105" r="5" fill="#5500ff"/>
-            </svg>
+        <!-- 4: white left / dark right -->
+        <!-- To use a gif: data-media="gif" data-src="assets/timeline.gif" -->
+        <!-- To use a video: data-media="video" data-src="assets/timeline.mp4" -->
+        <div class="showcase-row showcase-row-flip">
+          <div class="showcase-light">
+            <div class="showcase-media showcase-media-svg" data-media="svg">
+              <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="280" rx="16" fill="#fdf8ff"/>
+                <rect x="20" y="220" width="360" height="40" rx="8" fill="#f0e8ff"/>
+                <rect x="20" y="220" width="360" height="40" rx="8" stroke="#d4b8ff" stroke-width="1"/>
+                <rect x="60"  y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 66 240)"/>
+                <rect x="120" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 126 240)"/>
+                <rect x="180" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 186 240)"/>
+                <rect x="240" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 246 240)"/>
+                <rect x="300" y="234" width="12" height="12" rx="2" fill="#5500ff" transform="rotate(45 306 240)"/>
+                <rect x="148" y="216" width="2" height="52" rx="1" fill="#5500ff"/>
+                <rect x="20" y="20" width="360" height="188" rx="10" fill="#fff" stroke="#e8d8ff" stroke-width="1"/>
+                <path d="M100 160 Q160 60 220 100 Q280 140 340 60" stroke="#d4b8ff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                <path d="M100 155 Q160 55 220 95 Q280 135 340 55" stroke="#b090ff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                <path d="M100 165 Q160 65 220 105 Q280 145 340 65" stroke="#5500ff" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="220" cy="105" r="5" fill="#5500ff"/>
+              </svg>
+            </div>
+          </div>
+          <div class="showcase-dark">
+            <div class="section-label">Animation</div>
+            <h3>Frame-by-frame control, exactly as intended.</h3>
+            <p>Accurate frame timing, exposure control, and flipbook playback give you full command over every drawing. Export to image sequences in separate folders, ready for production and post-processing pipelines.</p>
+            <ul class="showcase-list">
+              <li>Accurate frame timing &amp; exposure control</li>
+              <li>Flipbook playback</li>
+              <li>Export to numbered image sequences</li>
+              <li>Organised output folders per export</li>
+            </ul>
           </div>
         </div>
-        <div class="showcase-dark">
-          <div class="section-label">Animation</div>
-          <h3>Frame-by-frame control, exactly as intended.</h3>
-          <p>Accurate frame timing, exposure control, and flipbook playback give you full command over every drawing. Export to image sequences in separate folders, ready for production and post-processing pipelines.</p>
-          <ul class="showcase-list">
-            <li>Accurate frame timing &amp; exposure control</li>
-            <li>Flipbook playback</li>
-            <li>Export to numbered image sequences</li>
-            <li>Organised output folders per export</li>
-          </ul>
-        </div>
-      </div>
 
+      </div><!-- /.showcase-bg-wrap -->
     </section>
 
     <!-- NOTICE -->
