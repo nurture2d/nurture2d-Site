@@ -43,29 +43,157 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach(el => observer.observe(el));
 
-  // Showcase media renderer
+  // ── Showcase media renderer ──────────────────────────────────────────
   // Supports data-media="image|gif|video|svg"
   // gif and image both render as <img> — gifs autoplay natively
   document.querySelectorAll(".showcase-media[data-media]").forEach(el => {
     const type = el.dataset.media;
     const src  = el.dataset.src;
     const alt  = el.dataset.alt || "";
-    if (!src) return; // svg type has inline content, skip
+    if (!src) return;
     if (type === "image" || type === "gif") {
       const img = document.createElement("img");
-      img.src = src;
-      img.alt = alt;
+      img.src = src; img.alt = alt;
       el.appendChild(img);
     } else if (type === "video") {
       const vid = document.createElement("video");
-      vid.src = src;
-      vid.autoplay = true;
-      vid.loop = true;
-      vid.muted = true;
-      vid.playsInline = true;
+      vid.src = src; vid.autoplay = true;
+      vid.loop = true; vid.muted = true; vid.playsInline = true;
       el.appendChild(vid);
     }
   });
+
+  // ── Showcase canvas: wave-grid with warm glowing orbs ────────────────
+  (function () {
+    const canvas = document.getElementById("showcase-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const wrap = canvas.parentElement;
+
+    // Grid config
+    const COLS = 14, ROWS = 20;
+    const SPEED = 0.0006;   // wave speed — keep low for lightweight feel
+    let W, H, cw, ch, t = 0;
+
+    // Warm orb colours cycling through grid points
+    const ORB_COLORS = [
+      [180, 80, 255],   // violet
+      [255, 120, 40],   // amber
+      [220, 60, 180],   // magenta
+      [100, 160, 255],  // cool blue accent
+    ];
+
+    function resize() {
+      // Canvas covers the dark-side column (left 50% of wrap)
+      const rect = wrap.getBoundingClientRect();
+      W = Math.round(rect.width * 0.5);
+      H = rect.height || wrap.offsetHeight;
+      canvas.width  = W;
+      canvas.height = H;
+      cw = W / (COLS - 1);
+      ch = H / (ROWS - 1);
+    }
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function draw() {
+      t += SPEED;
+      ctx.clearRect(0, 0, W, H);
+
+      // ── Base background: deep violet-navy ──
+      ctx.fillStyle = "#0c0a1a";
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Vignette: darker corners ──
+      const vg = ctx.createRadialGradient(W * 0.5, H * 0.4, H * 0.1, W * 0.5, H * 0.4, H * 0.9);
+      vg.addColorStop(0,   "rgba(30,20,60,0)");
+      vg.addColorStop(0.6, "rgba(10,6,24,0.3)");
+      vg.addColorStop(1,   "rgba(4,2,12,0.75)");
+      ctx.fillStyle = vg;
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Compute wave-displaced grid points ──
+      const pts = [];
+      for (let r = 0; r < ROWS; r++) {
+        pts[r] = [];
+        for (let c = 0; c < COLS; c++) {
+          const bx = c * cw;
+          const by = r * ch;
+          // Two overlapping sine waves for organic feel
+          const dx = Math.sin(r * 0.45 + t * 6.2 + c * 0.3) * cw * 0.18;
+          const dy = Math.cos(c * 0.4  + t * 5.1 + r * 0.25) * ch * 0.18;
+          pts[r][c] = { x: bx + dx, y: by + dy };
+        }
+      }
+
+      // ── Draw grid lines ──
+      ctx.lineWidth = 0.6;
+      // Horizontal
+      for (let r = 0; r < ROWS; r++) {
+        const alpha = 0.08 + 0.04 * Math.sin(r * 0.5 + t * 3);
+        ctx.strokeStyle = `rgba(140,80,255,${alpha})`;
+        ctx.beginPath();
+        for (let c = 0; c < COLS; c++) {
+          const p = pts[r][c];
+          c === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+        }
+        ctx.stroke();
+      }
+      // Vertical
+      for (let c = 0; c < COLS; c++) {
+        const alpha = 0.08 + 0.04 * Math.sin(c * 0.5 + t * 2.5);
+        ctx.strokeStyle = `rgba(140,80,255,${alpha})`;
+        ctx.beginPath();
+        for (let r = 0; r < ROWS; r++) {
+          const p = pts[r][c];
+          r === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+        }
+        ctx.stroke();
+      }
+
+      // ── Draw glowing orbs at grid intersections ──
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const p = pts[r][c];
+          // Pulse: each orb has its own phase
+          const phase = (r * COLS + c) * 0.37;
+          const pulse = 0.5 + 0.5 * Math.sin(t * 8 + phase);
+          // Pick colour by position
+          const ci = (r + c) % ORB_COLORS.length;
+          const [rr, gg, bb] = ORB_COLORS[ci];
+          const radius = lerp(1.5, 3.5, pulse);
+          const alpha  = lerp(0.15, 0.55, pulse);
+
+          // Soft glow halo
+          const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius * 5);
+          grd.addColorStop(0,   `rgba(${rr},${gg},${bb},${alpha * 0.6})`);
+          grd.addColorStop(0.4, `rgba(${rr},${gg},${bb},${alpha * 0.15})`);
+          grd.addColorStop(1,   `rgba(${rr},${gg},${bb},0)`);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, radius * 5, 0, Math.PI * 2);
+          ctx.fillStyle = grd;
+          ctx.fill();
+
+          // Core dot
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${rr},${gg},${bb},${alpha})`;
+          ctx.fill();
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    // Observe wrap size changes (handles rows being added)
+    const ro = new ResizeObserver(() => { resize(); });
+    ro.observe(wrap);
+    resize();
+    draw();
+
+    // On mobile the canvas covers full width
+    window.addEventListener("resize", resize, { passive: true });
+  })();
   const sections = document.querySelectorAll("section[id]");
   const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
   const sectionObserver = new IntersectionObserver((entries) => {
