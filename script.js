@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const type = el.dataset.media;
     const src  = el.dataset.src;
     const alt  = el.dataset.alt || "";
-    if (!src) return;
+    if (!src || el.children.length > 0) return; // skip if already has content or no src
     if (type === "image" || type === "gif") {
       const img = document.createElement("img");
       img.src = src; img.alt = alt;
