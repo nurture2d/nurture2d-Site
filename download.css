@@ -1,253 +1,135 @@
 /* ============================================================
-   DOWNLOAD PAGE
+   DOWNLOAD PAGE — Nurture2D 2026
+   Dark hero + light download section, consistent with main site
    ============================================================ */
 
-.dl-main { padding-top: 60px; }
+.dl-main { padding-top: 56px; }
 
-/* ---- DARK HERO ---- */
+/* ── DARK HERO ── */
 .dl-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 90px 24px 72px;
+  position: relative; overflow: hidden;
+  padding: 88px var(--s-6) 68px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--grey-950);
 }
-
 .dl-hero-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
 }
+.dl-hero-content .hero-sub { margin-bottom: var(--s-10); }
 
-.dl-hero-content .hero-sub {
-  margin-bottom: 36px;
-}
-
-/* Type segment — centered under title */
+/* Type segment */
 .dl-hero-content .segment {
   display: inline-flex;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 4px;
-  gap: 2px;
+  background: var(--grey-800);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-full);
+  padding: 4px; gap: 2px;
 }
-
 .seg-btn {
-  padding: 9px 26px;
-  border-radius: 999px;
-  border: none;
-  background: none;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-2);
-  cursor: pointer;
-  transition: background 0.22s, color 0.22s, box-shadow 0.22s;
-  font-family: var(--font);
-  white-space: nowrap;
+  padding: 8px 24px; border-radius: var(--r-full);
+  border: none; background: none;
+  font-size: 14px; font-weight: 500;
+  color: var(--t-muted); cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  font-family: var(--font); white-space: nowrap;
 }
-
 .seg-btn.active {
-  background: var(--brand);
-  color: #fff;
-  box-shadow: 0 0 18px var(--brand-glow);
+  background: var(--accent); color: #fff;
+  box-shadow: 0 0 16px var(--accent-glow);
 }
 
-/* ---- LIGHT SECTION ---- */
+/* ── LIGHT DOWNLOAD SECTION ── */
 .dl-light {
-  background: linear-gradient(160deg, #f0eeff 0%, #e8f0ff 40%, #eef5ff 100%);
-  padding: 60px 24px 80px;
-  display: flex;
-  justify-content: center;
+  background: var(--grey-100);
+  padding: var(--s-16) var(--s-6) var(--s-24);
+  display: flex; justify-content: center;
+  border-top: 1px solid var(--grey-200);
 }
-
 .dl-light-inner {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  width: 100%; max-width: 900px;
+  display: flex; flex-direction: column; align-items: center; gap: var(--s-10);
 }
 
-/* ---- VERSION STRIP ---- */
-.version-strip-wrap {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
+/* ── VERSION STRIP ── */
+.version-strip-wrap { display: flex; justify-content: center; width: 100%; }
 .version-strip {
-  display: inline-flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(85,0,255,0.15);
-  border-radius: 999px;
-  padding: 6px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 24px rgba(85,0,255,0.1);
+  display: inline-flex; gap: var(--s-2);
+  flex-wrap: wrap; justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--r-full);
+  padding: 5px;
+  box-shadow: var(--shadow-sm);
 }
-
 .ver-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1px;
-  padding: 10px 28px;
-  border-radius: 999px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  transition: background 0.22s, box-shadow 0.22s, color 0.22s;
+  display: flex; flex-direction: column; align-items: center; gap: 1px;
+  padding: 9px 26px; border-radius: var(--r-full);
+  border: none; background: none; cursor: pointer;
+  transition: background 0.18s ease, box-shadow 0.18s ease;
   font-family: var(--font);
 }
-
-.ver-btn .ver-num {
-  font-size: 15px;
-  font-weight: 700;
-  color: #2a1a5e;
-  line-height: 1;
-}
-
-.ver-btn .ver-sub {
-  font-size: 11px;
-  font-weight: 500;
-  color: #7060a0;
-  letter-spacing: 0.2px;
-}
-
-.ver-btn.active {
-  background: var(--brand);
-  box-shadow: 0 0 20px var(--brand-glow);
-}
-
+.ver-btn .ver-num { font-size: 14px; font-weight: 700; color: var(--t-dark); line-height: 1; }
+.ver-btn .ver-sub { font-size: 11px; font-weight: 500; color: var(--t-dark-3); letter-spacing: 0.2px; }
+.ver-btn.active { background: var(--accent); box-shadow: 0 0 18px var(--accent-glow); }
 .ver-btn.active .ver-num,
-.ver-btn.active .ver-sub {
-  color: #fff;
-}
+.ver-btn.active .ver-sub { color: #fff; }
+.ver-btn.soon { opacity: 0.4; cursor: not-allowed; }
 
-.ver-btn.soon {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-/* ---- DOWNLOAD BUTTONS (horizontal row) ---- */
+/* ── DOWNLOAD BUTTONS ── */
 .dl-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  width: 100%;
+  display: flex; flex-wrap: wrap; gap: 13px;
+  justify-content: center; width: 100%;
 }
-
 .dl-btn {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  background: rgba(255,255,255,0.85);
-  border: 1px solid rgba(85,0,255,0.15);
-  border-radius: 16px;
-  min-width: 220px;
-  flex: 1 1 200px;
-  max-width: 280px;
+  display: flex; align-items: center; gap: 13px;
+  padding: 17px 20px;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--r-lg);
+  min-width: 210px; flex: 1 1 190px; max-width: 270px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(85,0,255,0.08);
+  transition: transform 0.2s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-sm);
   text-decoration: none;
 }
-
 .dl-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(85,0,255,0.18);
-  border-color: rgba(85,0,255,0.35);
-  background: #fff;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1), 0 0 0 1px rgba(110,58,255,0.25);
+  border-color: rgba(110,58,255,0.3);
 }
-
 .dl-btn-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 42px; height: 42px; border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  background: rgba(85,0,255,0.1);
-  color: var(--brand);
-  border: 1px solid rgba(85,0,255,0.18);
+  background: rgba(110,58,255,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(110,58,255,0.15);
 }
+.dl-btn-icon.win   { color: #0078d4; background: rgba(0,120,212,0.07); border-color: rgba(0,120,212,0.15); }
+.dl-btn-icon.linux { background: rgba(255,180,0,0.07); border-color: rgba(255,180,0,0.15); }
+.dl-btn-icon.gh    { color: #333; background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.1); }
+.dl-btn-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.dl-btn-name { font-size: 14px; font-weight: 700; color: var(--t-dark); }
+.dl-btn-meta { font-size: 12px; color: var(--t-dark-3); }
+.dl-btn-arrow { color: var(--grey-300); flex-shrink: 0; transition: color 0.18s ease, transform 0.18s ease; }
+.dl-btn:hover .dl-btn-arrow { color: var(--accent); transform: translateY(2px); }
 
-.dl-btn-icon.win   { color: #0078d4; background: rgba(0,120,212,0.08); border-color: rgba(0,120,212,0.18); }
-.dl-btn-icon.linux { background: rgba(255,180,0,0.08); border-color: rgba(255,180,0,0.18); }
-.dl-btn-icon.gh    { color: #333; background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.1); }
-
-.dl-btn-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.dl-btn-name {
-  font-size: 14px;
-  font-weight: 700;
-  color: #1a0a3a;
-}
-
-.dl-btn-meta {
-  font-size: 12px;
-  color: #7060a0;
-}
-
-.dl-btn-arrow {
-  color: #9080c0;
-  flex-shrink: 0;
-  transition: color 0.2s, transform 0.2s;
-}
-
-.dl-btn:hover .dl-btn-arrow {
-  color: var(--brand);
-  transform: translateY(2px);
-}
-
-/* ---- COMING SOON STATE ---- */
+/* ── COMING SOON STATE ── */
 .dl-soon-state {
-  text-align: center;
-  padding: 40px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
+  text-align: center; padding: 40px var(--s-6);
+  display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%;
 }
+.soon-emoji { font-size: 42px; margin-bottom: var(--s-2); }
+.dl-soon-state h3 { font-size: 21px; font-weight: 700; color: var(--t-dark); }
+.dl-soon-state p { font-size: 15px; color: var(--t-dark-3); max-width: 360px; line-height: 1.6; }
 
-.soon-emoji { font-size: 44px; margin-bottom: 8px; }
-
-.dl-soon-state h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1a0a3a;
-}
-
-.dl-soon-state p {
-  font-size: 15px;
-  color: #7060a0;
-  max-width: 380px;
-  line-height: 1.6;
-}
-
-/* ---- RESPONSIVE ---- */
+/* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-  .seg-btn  { padding: 8px 18px; font-size: 13px; }
-  .ver-btn  { padding: 8px 18px; }
+  .seg-btn  { padding: 7px 16px; font-size: 13px; }
+  .ver-btn  { padding: 8px 16px; }
   .dl-btn   { max-width: 100%; flex: 1 1 100%; }
-  .version-strip { border-radius: 20px; padding: 6px; }
+  .version-strip { border-radius: var(--r-xl); padding: 5px; }
 }
