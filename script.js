@@ -210,3 +210,101 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(s => sectionObserver.observe(s));
 
 });
+
+// ── Feature Tutorials Tab System ─────────────────────────────────────────────
+(function () {
+  const tabsEl = document.getElementById("feat-tabs");
+  const gridEl = document.getElementById("feat-grid");
+  if (!tabsEl || !gridEl) return;
+
+  // ── Tutorial data — swap in real video URLs / thumbnails when ready ──
+  const tutorials = {
+    sketch: [
+      { title: "Pen Tool Presets Overview",       duration: "4:12", thumb: null },
+      { title: "Sketch Brush & Pressure Curves",  duration: "6:30", thumb: null },
+      { title: "Draw Behind Feature",             duration: "3:05", thumb: null },
+      { title: "Onion Skinning Setup",            duration: "5:48", thumb: null },
+      { title: "Shift & Trace Workflow",          duration: "7:20", thumb: null },
+      { title: "Brush Engine Deep Dive",          duration: "9:15", thumb: null },
+    ],
+    cleanup: [
+      { title: "Lineart Cleanup Basics",          duration: "5:00", thumb: null },
+      { title: "Using the Eraser Effectively",    duration: "3:40", thumb: null },
+      { title: "Layer Management for Cleanup",    duration: "4:55", thumb: null },
+      { title: "Smoothing Rough Lines",           duration: "6:10", thumb: null },
+    ],
+    animation: [
+      { title: "Frame-by-Frame Basics",           duration: "8:00", thumb: null },
+      { title: "Exposure Control",                duration: "4:30", thumb: null },
+      { title: "Flipbook Playback",               duration: "3:15", thumb: null },
+      { title: "Timing & Spacing",                duration: "10:05", thumb: null },
+      { title: "Walk Cycle Tutorial",             duration: "12:40", thumb: null },
+    ],
+    coloring: [
+      { title: "Auto Color Line Fill",            duration: "5:25", thumb: null },
+      { title: "Filling Transparent Gaps",        duration: "4:00", thumb: null },
+      { title: "Color Wheel Walkthrough",         duration: "3:50", thumb: null },
+      { title: "Dplate Tool for Color Sheets",    duration: "6:35", thumb: null },
+      { title: "Cell Shading Workflow",           duration: "9:00", thumb: null },
+    ],
+    exporting: [
+      { title: "Exporting Image Sequences",       duration: "4:45", thumb: null },
+      { title: "Output Folder Organisation",      duration: "3:20", thumb: null },
+      { title: "Export Settings Overview",        duration: "5:10", thumb: null },
+    ],
+  };
+
+  // Play icon SVG
+  const playIcon = `<svg class="vcard-play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="12" fill="rgba(85,0,255,0.85)"/>
+    <polygon points="10,8 17,12 10,16" fill="#fff"/>
+  </svg>`;
+
+  function render(cat) {
+    const list = tutorials[cat] || [];
+    gridEl.innerHTML = list.map((item, i) => `
+      <button class="vcard" data-index="${i}" data-cat="${cat}" aria-label="Play: ${item.title}">
+        <div class="vcard-thumb">
+          ${item.thumb
+            ? `<img src="${item.thumb}" alt="${item.title}" />`
+            : `<div class="vcard-thumb-placeholder"></div>`}
+          ${playIcon}
+        </div>
+        <div class="vcard-info">
+          <span class="vcard-title">${item.title}</span>
+          <span class="vcard-meta">${item.duration}</span>
+        </div>
+      </button>
+    `).join("");
+
+    // Stagger cards in
+    gridEl.querySelectorAll(".vcard").forEach((card, i) => {
+      card.style.animationDelay = `${i * 55}ms`;
+      card.classList.add("vcard-enter");
+    });
+  }
+
+  // Tab switching
+  tabsEl.addEventListener("click", e => {
+    const btn = e.target.closest(".feat-tab");
+    if (!btn) return;
+    tabsEl.querySelectorAll(".feat-tab").forEach(b => {
+      b.classList.remove("active");
+      b.setAttribute("aria-selected", "false");
+    });
+    btn.classList.add("active");
+    btn.setAttribute("aria-selected", "true");
+    render(btn.dataset.cat);
+  });
+
+  // Card click — video player hook (wired up later)
+  gridEl.addEventListener("click", e => {
+    const card = e.target.closest(".vcard");
+    if (!card) return;
+    // TODO: open video player modal
+    console.log("Play tutorial:", card.dataset.cat, card.dataset.index);
+  });
+
+  // Initial render
+  render("sketch");
+})();
