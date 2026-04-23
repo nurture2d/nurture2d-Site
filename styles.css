@@ -538,25 +538,6 @@ button { font-family: var(--font); }
   display: -webkit-box;
   -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
-.vcard-desc {
-  font-size: 11px; color: var(--t-muted);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-}
-/* Cross-listed badge — shown on cards that appear in multiple tabs */
-.vcard-crosslabel {
-  position: absolute;
-  bottom: var(--s-2); left: var(--s-2);
-  background: rgba(110,58,255,0.82);
-  backdrop-filter: blur(6px);
-  color: #fff;
-  font-size: 10px; font-weight: 600;
-  padding: 3px 8px;
-  border-radius: var(--r-full);
-  letter-spacing: 0.2px;
-  pointer-events: none;
-}
 .vcard-meta {
   font-size: 11px; color: var(--t-muted);
   display: flex; align-items: center; gap: 5px;
@@ -565,6 +546,15 @@ button { font-family: var(--font); }
   content: '';
   display: inline-block; width: 5px; height: 5px;
   border-radius: 50%; background: var(--accent-dim); opacity: 0.8;
+}
+/* Cross-listed badge */
+.vcard-crosslabel {
+  position: absolute; bottom: var(--s-2); left: var(--s-2);
+  background: rgba(110,58,255,0.82);
+  backdrop-filter: blur(6px);
+  color: #fff; font-size: 10px; font-weight: 600;
+  padding: 3px 8px; border-radius: var(--r-full);
+  pointer-events: none;
 }
 @keyframes vcardIn {
   from { opacity: 0; transform: translateY(14px); }

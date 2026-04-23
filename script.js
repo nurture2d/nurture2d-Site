@@ -218,99 +218,33 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!tabsEl || !gridEl) return;
 
   // ── Tutorial data — swap in real video URLs / thumbnails when ready ──
-  // thumb: null = placeholder shown until real thumbnail is added
-  // url:   null = no video yet; player will handle this gracefully later
+  // duration: placeholder — update with real runtime once videos are recorded
   const tutorials = {
     sketch: [
-      {
-        title: "Pen Preset Overview",
-        desc:  "A walkthrough of all five pen presets — what each one does and when to use them.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Sketch Presets & Pressure Curves",
-        desc:  "How the custom sketch brush engine works, including pressure curve tuning for a natural pencil feel.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Brush Engine Deep Dive",
-        desc:  "An in-depth look at the brush engine internals — texture, opacity, and blending behaviour.",
-        thumb: null, url: null,
-      },
+      { title: "Pen Preset Overview",               duration: "--:--", thumb: null, url: null },
+      { title: "Sketch Presets & Pressure Curves",  duration: "--:--", thumb: null, url: null },
+      { title: "Brush Engine Deep Dive",             duration: "--:--", thumb: null, url: null },
     ],
     cleanup: [
-      {
-        title: "Pen Preset Overview",
-        desc:  "Also relevant here — pen presets are the primary tool for clean lineart. Same video as in Sketch.",
-        thumb: null, url: null,
-        note:  "Also in Sketch Engine & Brushes",
-      },
-      {
-        title: "Curve Family Tools",
-        desc:  "Using the curve and bezier tools to produce smooth, clean lines from rough sketches.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Using the Eraser Effectively",
-        desc:  "Eraser modes, sizes, and techniques for precise cleanup without destroying your lineart.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Layer Management",
-        desc:  "Organising rough, cleanup, and colour layers — a practical workflow for traditional animation.",
-        thumb: null, url: null,
-      },
+      { title: "Pen Preset Overview",               duration: "--:--", thumb: null, url: null, note: "Also in Sketch" },
+      { title: "Curve Family Tools",                duration: "--:--", thumb: null, url: null },
+      { title: "Using the Eraser Effectively",      duration: "--:--", thumb: null, url: null },
+      { title: "Layer Management",                  duration: "--:--", thumb: null, url: null },
     ],
     animation: [
-      {
-        title: "Frame by Frame & Flipbook Basics",
-        desc:  "Creating your first animation — adding frames, drawing on them, and previewing with flipbook playback.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Exposure Control",
-        desc:  "How exposure works in Nurture2D and how to use it to control timing without redrawing frames.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Timing & Spacing",
-        desc:  "The principles of timing and spacing applied practically inside the timeline.",
-        thumb: null, url: null,
-      },
-      {
-        title: "UI & Layers",
-        desc:  "A tour of the animation-specific UI — timeline, layer panel, and how they work together.",
-        thumb: null, url: null,
-      },
+      { title: "Frame by Frame & Flipbook Basics",  duration: "--:--", thumb: null, url: null },
+      { title: "Exposure Control",                  duration: "--:--", thumb: null, url: null },
+      { title: "Timing & Spacing",                  duration: "--:--", thumb: null, url: null },
+      { title: "UI & Layers",                       duration: "--:--", thumb: null, url: null },
     ],
     coloring: [
-      {
-        title: "Bucket Tool",
-        desc:  "Using the fill bucket with Nurture2D's non-antialiased line system for clean, gap-free fills.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Gap Color Fill Tools",
-        desc:  "Filling transparent pixel gaps using lasso and rectangle selection — no more white halos.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Dplate Tool",
-        desc:  "Creating and using character colour sheets (dplates) for consistent colour across scenes.",
-        thumb: null, url: null,
-      },
-      {
-        title: "Cell Shading Workflow",
-        desc:  "A full end-to-end cell shading walkthrough using Nurture2D's auto color line fill system.",
-        thumb: null, url: null,
-      },
+      { title: "Bucket Tool",                       duration: "--:--", thumb: null, url: null },
+      { title: "Gap Color Fill Tools",              duration: "--:--", thumb: null, url: null },
+      { title: "Dplate Tool",                       duration: "--:--", thumb: null, url: null },
+      { title: "Cell Shading Workflow",             duration: "--:--", thumb: null, url: null },
     ],
     exporting: [
-      {
-        title: "Export & Settings",
-        desc:  "Everything you need to know — image sequence export, output folder structure, and all export settings explained.",
-        thumb: null, url: null,
-      },
+      { title: "Export & Settings",                 duration: "--:--", thumb: null, url: null },
     ],
   };
 
@@ -333,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="vcard-info">
           <span class="vcard-title">${item.title}</span>
-          <span class="vcard-desc">${item.desc}</span>
+          <span class="vcard-meta">${item.duration}</span>
         </div>
       </button>
     `).join("");
