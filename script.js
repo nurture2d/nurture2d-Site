@@ -221,12 +221,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // duration: placeholder — update with real runtime once videos are recorded
   const tutorials = {
     sketch: [
-      { title: "Pen Preset Overview",               duration: "--:--", thumb: null, url: null },
       { title: "Sketch Presets & Pressure Curves",  duration: "--:--", thumb: null, url: null },
       { title: "Brush Engine Deep Dive",             duration: "--:--", thumb: null, url: null },
     ],
     cleanup: [
-      { title: "Pen Preset Overview",               duration: "--:--", thumb: null, url: null, note: "Also in Sketch" },
+      { title: "Pen Preset Overview",               duration: "--:--", thumb: null, url: null },
       { title: "Curve Family Tools",                duration: "--:--", thumb: null, url: null },
       { title: "Using the Eraser Effectively",      duration: "--:--", thumb: null, url: null },
       { title: "Layer Management",                  duration: "--:--", thumb: null, url: null },
