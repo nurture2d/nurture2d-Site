@@ -218,39 +218,99 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!tabsEl || !gridEl) return;
 
   // ── Tutorial data — swap in real video URLs / thumbnails when ready ──
+  // thumb: null = placeholder shown until real thumbnail is added
+  // url:   null = no video yet; player will handle this gracefully later
   const tutorials = {
     sketch: [
-      { title: "Pen Tool Presets Overview",       duration: "4:12", thumb: null },
-      { title: "Sketch Brush & Pressure Curves",  duration: "6:30", thumb: null },
-      { title: "Draw Behind Feature",             duration: "3:05", thumb: null },
-      { title: "Onion Skinning Setup",            duration: "5:48", thumb: null },
-      { title: "Shift & Trace Workflow",          duration: "7:20", thumb: null },
-      { title: "Brush Engine Deep Dive",          duration: "9:15", thumb: null },
+      {
+        title: "Pen Preset Overview",
+        desc:  "A walkthrough of all five pen presets — what each one does and when to use them.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Sketch Presets & Pressure Curves",
+        desc:  "How the custom sketch brush engine works, including pressure curve tuning for a natural pencil feel.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Brush Engine Deep Dive",
+        desc:  "An in-depth look at the brush engine internals — texture, opacity, and blending behaviour.",
+        thumb: null, url: null,
+      },
     ],
     cleanup: [
-      { title: "Lineart Cleanup Basics",          duration: "5:00", thumb: null },
-      { title: "Using the Eraser Effectively",    duration: "3:40", thumb: null },
-      { title: "Layer Management for Cleanup",    duration: "4:55", thumb: null },
-      { title: "Smoothing Rough Lines",           duration: "6:10", thumb: null },
+      {
+        title: "Pen Preset Overview",
+        desc:  "Also relevant here — pen presets are the primary tool for clean lineart. Same video as in Sketch.",
+        thumb: null, url: null,
+        note:  "Also in Sketch Engine & Brushes",
+      },
+      {
+        title: "Curve Family Tools",
+        desc:  "Using the curve and bezier tools to produce smooth, clean lines from rough sketches.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Using the Eraser Effectively",
+        desc:  "Eraser modes, sizes, and techniques for precise cleanup without destroying your lineart.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Layer Management",
+        desc:  "Organising rough, cleanup, and colour layers — a practical workflow for traditional animation.",
+        thumb: null, url: null,
+      },
     ],
     animation: [
-      { title: "Frame-by-Frame Basics",           duration: "8:00", thumb: null },
-      { title: "Exposure Control",                duration: "4:30", thumb: null },
-      { title: "Flipbook Playback",               duration: "3:15", thumb: null },
-      { title: "Timing & Spacing",                duration: "10:05", thumb: null },
-      { title: "Walk Cycle Tutorial",             duration: "12:40", thumb: null },
+      {
+        title: "Frame by Frame & Flipbook Basics",
+        desc:  "Creating your first animation — adding frames, drawing on them, and previewing with flipbook playback.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Exposure Control",
+        desc:  "How exposure works in Nurture2D and how to use it to control timing without redrawing frames.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Timing & Spacing",
+        desc:  "The principles of timing and spacing applied practically inside the timeline.",
+        thumb: null, url: null,
+      },
+      {
+        title: "UI & Layers",
+        desc:  "A tour of the animation-specific UI — timeline, layer panel, and how they work together.",
+        thumb: null, url: null,
+      },
     ],
     coloring: [
-      { title: "Auto Color Line Fill",            duration: "5:25", thumb: null },
-      { title: "Filling Transparent Gaps",        duration: "4:00", thumb: null },
-      { title: "Color Wheel Walkthrough",         duration: "3:50", thumb: null },
-      { title: "Dplate Tool for Color Sheets",    duration: "6:35", thumb: null },
-      { title: "Cell Shading Workflow",           duration: "9:00", thumb: null },
+      {
+        title: "Bucket Tool",
+        desc:  "Using the fill bucket with Nurture2D's non-antialiased line system for clean, gap-free fills.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Gap Color Fill Tools",
+        desc:  "Filling transparent pixel gaps using lasso and rectangle selection — no more white halos.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Dplate Tool",
+        desc:  "Creating and using character colour sheets (dplates) for consistent colour across scenes.",
+        thumb: null, url: null,
+      },
+      {
+        title: "Cell Shading Workflow",
+        desc:  "A full end-to-end cell shading walkthrough using Nurture2D's auto color line fill system.",
+        thumb: null, url: null,
+      },
     ],
     exporting: [
-      { title: "Exporting Image Sequences",       duration: "4:45", thumb: null },
-      { title: "Output Folder Organisation",      duration: "3:20", thumb: null },
-      { title: "Export Settings Overview",        duration: "5:10", thumb: null },
+      {
+        title: "Export & Settings",
+        desc:  "Everything you need to know — image sequence export, output folder structure, and all export settings explained.",
+        thumb: null, url: null,
+      },
     ],
   };
 
@@ -269,10 +329,11 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<img src="${item.thumb}" alt="${item.title}" />`
             : `<div class="vcard-thumb-placeholder"></div>`}
           ${playIcon}
+          ${item.note ? `<div class="vcard-crosslabel">${item.note}</div>` : ''}
         </div>
         <div class="vcard-info">
           <span class="vcard-title">${item.title}</span>
-          <span class="vcard-meta">${item.duration}</span>
+          <span class="vcard-desc">${item.desc}</span>
         </div>
       </button>
     `).join("");
