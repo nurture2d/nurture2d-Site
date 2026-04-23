@@ -3,13 +3,13 @@
    ============================================================ */
 
 :root {
-  --bg:        #08080f;
-  --bg-2:      #0d0d18;
-  --bg-3:      #12121f;
-  --surface:   rgba(255,255,255,0.04);
-  --surface-2: rgba(255,255,255,0.07);
-  --border:    rgba(255,255,255,0.08);
-  --border-2:  rgba(85,0,255,0.3);
+  --bg:        #1e1e24;
+  --bg-2:      #26262e;
+  --bg-3:      #2e2e38;
+  --surface:   rgba(255,255,255,0.05);
+  --surface-2: rgba(255,255,255,0.09);
+  --border:    rgba(255,255,255,0.10);
+  --border-2:  rgba(85,0,255,0.35);
   --text:      #ffffff;
   --text-2:    #d0d0e8;
   --text-3:    #9090b8;
@@ -264,7 +264,7 @@ a { color: inherit; text-decoration: none; }
 .tool-icon.active { background: var(--brand); box-shadow: 0 0 12px var(--brand-glow); }
 .window-canvas {
   flex: 1; min-height: 200px; position: relative;
-  background: #0a0a14;
+  background: #2e2e38;
   overflow: hidden;
 }
 .canvas-lines { position: absolute; inset: 0; }
@@ -366,7 +366,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ---- DARK SIDE ---- */
 .showcase-dark {
-  background: #0c0a1a;   /* deep violet-navy base */
+  background: #26262e;   /* matches --bg-2 */
   padding: 72px 60px;
   display: flex;
   flex-direction: column;

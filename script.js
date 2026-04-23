@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
       t += SPEED;
       ctx.clearRect(0, 0, W, H);
 
-      // ── Base background: deep violet-navy ──
-      ctx.fillStyle = "#0c0a1a";
+      // ── Base background: dark grey ──
+      ctx.fillStyle = "#26262e";
       ctx.fillRect(0, 0, W, H);
 
       // ── Vignette: darker corners ──
