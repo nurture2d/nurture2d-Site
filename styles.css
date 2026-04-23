@@ -459,26 +459,157 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================================
-   NOTICE
+   SYSTEM SPECS
    ============================================================ */
-.notice-section { padding: 60px 24px; }
-.notice-card {
-  display: flex; gap: 20px; align-items: flex-start;
-  background: rgba(85,0,255,0.06);
-  border: 1px solid rgba(85,0,255,0.2);
-  border-left: 3px solid var(--brand);
-  border-radius: var(--radius);
-  padding: 28px;
-  max-width: 800px; margin: 0 auto;
+.specs-section { padding: 80px 24px; }
+
+.specs-header {
+  text-align: center;
+  margin-bottom: 52px;
 }
-.notice-icon {
-  flex-shrink: 0; width: 40px; height: 40px;
-  border-radius: 10px; background: rgba(85,0,255,0.15);
-  display: flex; align-items: center; justify-content: center;
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+/* ---- Cards ---- */
+.specs-card {
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.specs-card--recommended {
+  border-color: rgba(85,0,255,0.35);
+  background: linear-gradient(160deg, rgba(85,0,255,0.07) 0%, var(--bg-2) 60%);
+  box-shadow: 0 0 40px rgba(85,0,255,0.08);
+}
+
+.specs-card--minimum {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.specs-card-header { display: flex; flex-direction: column; gap: 10px; }
+
+.specs-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.specs-badge--recommended {
+  background: rgba(85,0,255,0.2);
+  border: 1px solid rgba(85,0,255,0.4);
   color: var(--brand-3);
 }
-.notice-body h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-.notice-body p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+
+.specs-badge--minimum {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text-3);
+}
+
+.specs-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.specs-card-sub {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* ---- Spec rows ---- */
+.specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.specs-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.specs-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-3);
+}
+
+.specs-key {
+  color: var(--text-3);
+  font-weight: 500;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.specs-val {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ---- Disclaimer note ---- */
+.specs-note {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+}
+
+.specs-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--text-3);
+}
+
+.specs-note p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 680px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .specs-card {
+    padding: 28px 24px;
+  }
+}
 
 /* ============================================================
    CTA
